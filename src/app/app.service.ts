@@ -20,4 +20,17 @@ export class AppService {
             return null;
         }
     }
+
+    public IsNumeric(texto:string){
+        var valoresAceptados = /^[0-9]+(.[0-9]+)?$/;
+        try {
+            if (texto.match(valoresAceptados)){
+                return true;
+            }else{
+                return false;
+            }
+        } catch (error) {
+            return false;
+        }
+    }
 }
